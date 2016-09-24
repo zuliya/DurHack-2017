@@ -203,7 +203,6 @@ display: block;
 }
 #about .content, #about .side-image {
 	flex: 1 1;
-	width: 50%;
 }
 
 #about .side-image {
@@ -354,6 +353,21 @@ display: block;
 	}
 	#team .member img {
 		max-width: 100px;
+	}
+	#about .side-image img {
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#about {
+		flex-direction: column;
+	}
+	#sponsors {
+		padding: 5em 0;
+	}
+	#about, #faq, #team {
+		padding: 5em 1.5em;
 	}
 }
 
