@@ -321,12 +321,16 @@ display: block;
 	background-color: #181c24;
 	color: #ffffff;
 }
+#sponsors p{
+	text-align: center;
+	margin: 25px;
+}
 #sponsors img{
 	padding: 1em;
 	background-color: #1d222b;
 	width: 200px;
 	height: 200px;
-	margin: 5px;
+	margin: 10px 5px 5px 0;
 }
 .helpers, .partners{
 	margin-right: auto;
@@ -343,7 +347,7 @@ display: block;
 	padding: 40px;
 	color: #dfe6ea;
 }
-#main-footer a{
+#main-footer a, #sponsors a{
 	color: #80c3ef;
 	text-decoration: none;
 	margin-left: 10px;
