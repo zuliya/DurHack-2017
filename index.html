@@ -9,11 +9,16 @@
 	<body>
 		<ul id="main-menu">
 			<!--<li><img src="images/shield.svg" height="50px"></li>-->
-			<li><a href="#">About</a></li>
-			<li><a href="#">Where</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Crew</a></li>
-			<li><a href="#">Sponsors</a></li>
+			<li class="mobile menu-control" onClick="toggleMenu()">
+			<svg width="16" height="10">
+				<polygon fill="white" points="0,0 16,0 8,10"/>
+			</svg>
+			</li>
+			<li class="menu-item"><a href="#">About</a></li>
+			<li class="menu-item"><a href="#">Where</a></li>
+			<li class="menu-item"><a href="#">FAQ</a></li>
+			<li class="menu-item"><a href="#">Crew</a></li>
+			<li class="menu-item"><a href="#">Sponsors</a></li>
 		</ul>
 		<header id="main-header">
 			<div class="header-content-wrapper">
@@ -172,5 +177,51 @@ Temporibus culpa excepturi et.</p>
 			infowindow.open(map,marker);
 		}
 		google.maps.event.addDomListener(window, 'load', init_map);
+		
+		// Fade header code
+		var header = document.getElementById("main-header");
+		var menu = document.getElementById("main-menu");
+		var faded = false;
+		document.onscroll = function() {
+			var headerHeight = header.offsetHeight;
+			if (document.body.scrollTop > headerHeight) {
+				if (!faded) {
+					menu.style.background = "rgba(0, 0, 0, 0.74)";
+					faded = true;
+				}
+			} else if (faded) {
+				menu.style.background = "rgba(0, 0, 0, 0)";
+				faded = false;
+			}
+		}	
+		
+		//Menu scrolly uppy downy
+		var expanded = false;
+		var menuitems = document.getElementsByClassName("menu-item");
+		var menucontrol = document.getElementsByClassName("menu-control")[0];
+		var i = 0;
+		function toggleMenu() {
+			if (expanded) {
+				for (i = 0; i < menuitems.length; i++) { 
+					var item = menuitems[i];
+					item.style.height = "0px";
+					item.style.opacity = "0";
+				}
+				menucontrol.style.transform = "rotate(0deg)";
+				menucontrol.style.textAlign = "left";
+				menucontrol.style.marginBottom = "0px";
+				expanded = false;
+			} else {
+				for (i = 0; i < menuitems.length; i++) { 
+					var item = menuitems[i];
+					item.style.height = "55px";
+					item.style.opacity = "1";
+				}
+				menucontrol.style.transform = "rotate(180deg)";
+				menucontrol.style.textAlign = "right";
+				menucontrol.style.marginBottom = "20px";
+				expanded = true;
+			}
+		}
 	</script>
 </html>
