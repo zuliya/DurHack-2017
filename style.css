@@ -395,6 +395,9 @@ display: block;
 	#mlh-trust-badge {
 		right: 10px !important;
 	}
+	#about .side-image img {
+		width: 100%;
+	}
 }
 
 /* Extras */
