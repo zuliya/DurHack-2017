@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Durhack</title>
+	</head>
+	<body>
+		<ul id="main-menu">
+			<li><a href="#">About</a></li>
+			<li><a href="#">Where</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">The Team</a></li>
+			<li><a href="#">Sponsors</a></li>
+		</ul>
+		<header id="main-header">
+			<div class="header-content-wrapper">
+				<img class="logo" src="images/shield.svg">
+				<h1>Dur<span class="name-hack">Hack</span></h1>
+				<span class="header-info">
+					21-22 January 2017 <br>
+					Durham University
+				</span>
+				<div class="header-button-wrapper">
+					<button onClick="window.location = '#';">Apply</button>
+					<button onClick="window.location = '#';">Register for updates</button>
+				</div>
+			</div>
+		</header>
+		<section id="about">
+			<div class="content">
+				<h2>What?</h2>
+				<h3>A Hackathon Experience</h3>
+				<p>Voluptas at natus sit vel. Officiis quas omnis non sed cupiditate aliquam. Qui architecto harum sequi blanditiis laudantium et recusandae quo.
+Aut et consectetur est omnis. Ea optio autem non quaerat excepturi a. Fugiat maxime sunt eaque illum sapiente. Cum ab magni illum. Accusamus sit repudiandae et iste non minus.
+Delectus qui tempore esse voluptatem. Non totam vel cum mollitia corrupti aut. Dolor quia quisquam quia sequi.</p>
+				<h3>24 Hours of Code</h3>
+				<p>Optio voluptate excepturi voluptas at. Consectetur excepturi dignissimos vero expedita. Ut molestiae nisi tempora vitae similique doloremque sapiente. Illum possimus autem ratione officia.
+Ut error earum iste atque molestiae fuga quibusdam sapiente. Molestias omnis aut quia reprehenderit quasi inventore. Dolorum voluptatum ad saepe ratione illo consequatur. Qui est dolor nulla neque.</p>
+				<h3>For Students</h3>
+				<p>Earum molestiae animi nobis ea enim sint. Aliquam ratione mollitia recusandae reprehenderit odio molestiae. Voluptate ea et voluptatibus soluta nihil sed.
+Temporibus culpa excepturi et cum nobis. Id officiis qui magni. Culpa et impedit nesciunt laborum laboriosam repudiandae ut dolor.</p>
+			</div>
+			<div class="side-image">
+				<img src="http://placekitten.com/300/400">
+			</div>
+		</section>
+		<section id="map">
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD70GNb2FLOz3cVO-LpF0Jjk8STZgGZKX0"></script>
+			<div id="gmap-canvas">
+			</div>
+			<script type="text/javascript"> 
+				function init_map(){
+					var myOptions = {zoom:15,center:new google.maps.LatLng(54.773180, -1.571733),mapTypeId: google.maps.MapTypeId.ROADMAP};
+					map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
+					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(54.773180, -1.571733)});
+					infowindow = new google.maps.InfoWindow({
+						content: '<div style="height: 40px; width: 150px;"><strong>Durham Students\' Union</strong><br>New Elvet<br>Durham</div>',
+						maxWidth: 150
+					});
+					google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+					infowindow.open(map,marker);
+				}
+				google.maps.event.addDomListener(window, 'load', init_map);
+			</script>
+		</section>
+		<section id="faq">
+			<h2>FAQ</h2>
+			<div class="question">
+				<h3>What is Durhack?</h3>
+				<p>Durhack is a Hackathon taking place in Durham, UK on the 21st January. It's taking place in the 
+				<a href="https://www.google.com/maps/place/Durham+Students'+Union/@54.7732235,-1.5738356,17z/data=!3m1!4b1!4m5!3m4!1s0x487e87626481748d:0x3a5d3218efbacb98!8m2!3d54.7732235!4d-1.5716469?hl=en">Durham 
+				Students Union</a> and is open to students everywhere! For 24 hours, we will provide an internet connection, food, and power while you and a team create something cool.
+			</div>
+			<div class="question">
+				<h3>What is a Hackathon?</h3>
+				<p>Hackathons are a playground for coders, inventors and tinkerers - We give you 24 hours to brainstorm and create something new, an original idea, or proof of concept of literally anything. Perhaps the next 
+				killer app, a cutting edge hardware project or something different entirely! At the end, prizes will be awarded to the best and most original ideas.</p>
+			</div>
+			<div class="question">
+				<h3>Who can come?</h3>
+				<p>Durhack is run by students, for students, so you must be currently in full time education, and be 18 or older in order to attend. Please bring your student card when you come!</p>
+			</div>
+			<div class="question">
+				<h3>How do I sign up?</h3>
+				<p>Our tickets are managed through Eventbrite. Currently we haven't released any tickets, but we will be soon! If you want to hear about when we release tickets, then sign up to get
+				notifications <a href="#">here.</a></p>
+			</div>
+			<div class="question">
+				<h3>What should I bring?</h3>
+				<p>You'll need to bring your ticket, a Student ID and a laptop (with a charger!). You could also bring a pillow or sleeping stuff if you want to get some rest overnight.</p>
+			</div>
+			<div class="question">
+				<h3>How much is it?</h3>
+				<p>Durhack is FREE! We are kindly funded by our sponsors. We will provide food, power and t-shirts and you shouldn't have to spend a penny once you're here. Currently, we do not know
+				if we are able to provide travel reimbursements as the budget has not been finalised, so please negotiate your own travel to the venue.</p>
+			</div>
+			<div class="question">
+				<h3>Help! I don't have a team!</h3>
+				<p>If you don't have a team then don't worry, there will be an icebreaking event at the start of the hack where you can pitch ideas to others, or be pitched to and help build a great idea.
+				We also welcome people wishing to hack solo as well.</p>
+			</div>
+			<div class="question">
+				<h3>Code of conduct?</h3>
+				<p>We follow the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>. The gist is: Be nice.</p>
+			</div>
+			<div class="question last-question">
+				<h3>What if I have more questions?</h3>
+				<p>We'll be happy to answer it. Contact us by email at <a href="mailto:contact@durhack.com">contact@durhack.com</a>, ping us on
+				<a href="https://www.facebook.com/hackdurham">Facebook</a>, or shoot us a <a href="#">tweet</a>. We'll get back to you as soon as possible.
+			</div>
+		</section>
+		<section id="team">
+			<h2>The Core Team</h2>
+			<div class="team-container">
+				<div class="member">
+					<img src="http://placekitten.com/200/200">
+					<span class="name">John Cena</span>
+					<span class="description">U CAN'T C ME</span>
+				</div>
+				<div class="member">
+					<img src="http://placekitten.com/200/200">
+					<span class="name">John Cena</span>
+					<span class="description">U CAN'T C ME</span>
+				</div>
+				<div class="member">
+					<img src="http://placekitten.com/200/200">
+					<span class="name">John Cena</span>
+					<span class="description">U CAN'T C ME</span>
+				</div>
+				<div class="member">
+					<img src="http://placekitten.com/200/200">
+					<span class="name">John Cena</span>
+					<span class="description">U CAN'T C ME</span>
+				</div>
+				<div class="member">
+					<img src="http://placekitten.com/200/200">
+					<span class="name">John Cena</span>
+					<span class="description">U CAN'T C ME</span>
+				</div>
+			</div>
+		</section>
+		<section id="sponsors">
+		</section>
+		<footer id="main-footer">
+			Made with &lt;3 - Durhack 2016 - <a href="https://github.com/tnguyen/durhack">Github</a>
+		</footer>
+	</body>
+</html>
