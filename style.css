@@ -290,23 +290,22 @@ display: block;
 	text-align: center;
 }
 #team .team-container {
-margin-right: auto;
-margin-left: auto;
-width: 100%;
-	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	display: flex;
 }
 #team .member {
-
 	width: 12%;
 	display: inline-block;
-	float: left;
 	margin: 10px;
 	text-align: center;
+	flex: 1 1;
 }
 #team .member img {
 	width: 100%;
 	margin: auto;
-	border-radius: 100px;
+	border-radius: 50%;
 	overflow: hidden;
 }
 #sponsors {
@@ -340,6 +339,24 @@ width: 100%;
 	text-decoration: none;
 	margin-left: 10px;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+	#team .team-container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#team .member {
+		width: 100px;
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+	}
+	#team .member img {
+		max-width: 100px;
+	}
+}
+
 /* Extras */
 
 @keyframes fadein {
