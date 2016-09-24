@@ -99,10 +99,11 @@ font-family: 'Titillium Web', sans-serif;
 	/*background-color: rgba(0, 0, 0, 0.74);*/
 }
 #main-menu li { 
-display: inline-block;
-list-style-type: none;
+	display: inline-block;
+	list-style-type: none;
 	margin-right: 10px;
 	margin-left: 4px;
+	transition: 0.5s height;
 }
 #main-menu li a{
 	color: #ffffff;
@@ -340,6 +341,10 @@ display: block;
 	margin-left: 10px;
 }
 
+#main-menu .mobile {
+	display: none;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1000px) {
 	#team .team-container {
@@ -369,6 +374,26 @@ display: block;
 	}
 	#about, #faq, #team {
 		padding: 5em 1.5em;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	#main-menu {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0 0 10px;
+	}
+	#main-menu li:not(.mobile) {
+		margin-bottom: 0.3em;
+		height: 0;
+		opacity: 0;
+	}
+	#main-menu .mobile {
+		display: block;
+		margin-top: 7px;
+	}
+	#mlh-trust-badge {
+		right: 10px !important;
 	}
 }
 
