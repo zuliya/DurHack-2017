@@ -309,6 +309,14 @@ display: block;
 	border-radius: 50%;
 	overflow: hidden;
 }
+#team .member .name {
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+#team .member .description {
+	/*font-weight: 100;	*/
+}
 #sponsors {
 	background-color: #181c24;
 	color: #ffffff;
@@ -375,6 +383,11 @@ display: block;
 	#about, #faq, #team {
 		padding: 5em 1.5em;
 	}
+	#about .side-image img {
+		width: 100%;
+		display: none;
+		/* cat begone */
+	}
 }
 
 @media screen and (max-width: 470px) {
@@ -394,9 +407,6 @@ display: block;
 	}
 	#mlh-trust-badge {
 		right: 10px !important;
-	}
-	#about .side-image img {
-		width: 100%;
 	}
 }
 
