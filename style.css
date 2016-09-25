@@ -374,7 +374,7 @@ display: block;
 #team h2{
 	text-align: center;
 }
-#team .team-container {
+#team .team-container .core {
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
@@ -397,9 +397,14 @@ display: block;
 	font-weight: bold;
 	margin-top: 8px;
 	margin-bottom: 5px;
+	width: 100%;
+	display: block;
 }
 #team .member .description {
 	/*font-weight: 100;	*/
+}
+#team .helpers {
+	margin-top: 55px;
 }
 #sponsors {
 	background-color: #181c24;
@@ -455,7 +460,7 @@ display: block;
 	}
 }
 @media screen and (max-width: 1000px) {
-	#team .team-container {
+	#team .team-container .core {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
