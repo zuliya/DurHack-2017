@@ -245,6 +245,81 @@ display: block;
 	z-index: 5;
 }
 
+
+#schedule {
+	background-color: #3b283f;
+	color: #ffffff;
+}
+#schedule h2{
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+#schedule .table-container {
+	margin: 0;
+	padding: 0;
+}
+
+#schedule .table-block {
+	margin: 10px auto;
+	float: left;
+	width: 45%;
+	display: inline-block;
+	height: 100%;
+}
+@media screen and (max-width: 700px) {
+	#schedule .table-block {
+		width: 100%;
+	}
+}
+#schedule h4 {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #f0dbf4;
+	margin-bottom: 10px;
+}
+#schedule table {
+    width: 100%;
+}
+#schedule .table-block.left {
+	float: left;
+}
+#schedule .table-block.right {
+	float: right;
+	padding-right: 10px;
+}
+@media screen and (max-width: 470px) {
+	#schedule .table-block.left, #schedule .table-block.right {
+		padding: 0;
+	}
+	#schedule td, th {
+		padding: 15px 15px 15px 0 !important;
+	}
+}
+#schedule th {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: bold;
+}
+#schedule b {
+	font-weight: bold;
+	color: #dae6fa;
+}
+#schedule i {
+	font-style: italic;
+}
+#schedule p {
+	text-align: center;
+	padding-bottom: 15px;
+}
+#schedule td, th {
+    border: 1px none #dddddd;
+    text-align: left;
+	border-bottom-style: solid;
+	border-bottom-color: #684d6d;
+	padding: 15px;
+}
+
+
 #faq {
 	color: #24142a;
 	background-color: #edd9f2;
@@ -372,9 +447,9 @@ display: block;
 }
 
 /* Media Queries */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
 	.content {
-		width: 1080px;
+		width: 960px;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -410,7 +485,7 @@ display: block;
 	#sponsors {
 		padding: 5em 0;
 	}
-	#about, #faq, #team {
+	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
 	}
 	#about .side-image img {
@@ -438,6 +513,7 @@ display: block;
 	#mlh-trust-badge {
 		right: 10px !important;
 	}
+	
 }
 
 /* Extras */
