@@ -5,7 +5,7 @@
 
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web:200,600,700';
 
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500';
 
 /*CSS reset to give a good Cross Border baseline*/
 
@@ -191,29 +191,29 @@ display: block;
 	color: #87bcec;
 }
 /* section padding */
-#about, #faq, #team, #sponsors {
+#about, #schedule, #faq, #team, #sponsors {
 	padding: 5em 4em;
 }
 #about {
-	display: flex;
-	flex-direction: row;
 	background-color: #3b2840;
 	color: #ffffff;
+}
+#about .content .details {
+	float: left;
+
 }
 #about .content p {
 	margin-bottom: 2em;
 }
-#about .content, #about .side-image {
-	flex: 1 1;
-}
 
 #about .side-image {
-	display: flex;
+	
 }
 
 #about .side-image img {
 	margin: auto;
 	height: 500px;
+	display: inline;
 }
 #map {
 	height: 50vh;
@@ -226,6 +226,14 @@ display: block;
 	height: 100%;
 	z-index: 1;
 }
+.map-pointer {
+	/*background-color: #911d1d;*/
+	text-align: center;
+	font: 13px 'Source Sans Pro', sans-serif;
+	line-height: 17px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /* Cheeky map overlay hack */
 .overlay {
 	background:transparent; 
@@ -236,6 +244,7 @@ display: block;
 	margin-top:-50vh;
 	z-index: 5;
 }
+
 #faq {
 	color: #24142a;
 	background-color: #edd9f2;
@@ -330,7 +339,10 @@ display: block;
 	background-color: #1d222b;
 	width: 200px;
 	height: 200px;
-	margin: 10px 5px 5px 0;
+	margin: 10px 5px 5px;
+}
+#sponsors img:hover{
+	background-color: #2b3240;
 }
 .helpers, .partners{
 	margin-right: auto;
@@ -347,10 +359,12 @@ display: block;
 	padding: 40px;
 	color: #dfe6ea;
 }
+#main-footer a{
+		margin-left: 10px;
+}
 #main-footer a, #sponsors a{
 	color: #80c3ef;
 	text-decoration: none;
-	margin-left: 10px;
 }
 
 #main-menu .mobile {
@@ -358,6 +372,13 @@ display: block;
 }
 
 /* Media Queries */
+@media screen and (min-width: 1000px) {
+	.content {
+		width: 1080px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
 @media screen and (max-width: 1000px) {
 	#team .team-container {
 		flex-wrap: wrap;
@@ -376,11 +397,16 @@ display: block;
 		height: auto;
 	}
 }
-
-@media screen and (max-width: 750px) {
-	#about {
-		flex-direction: column;
+@media screen and (min-width:751px){
+	#about .content .details {
+		float: left;
+		width: 50%;
 	}
+}
+@media screen and (max-width: 750px) {
+/*	#about {
+		flex-direction: column;
+	}*/
 	#sponsors {
 		padding: 5em 0;
 	}
