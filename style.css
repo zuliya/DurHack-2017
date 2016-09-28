@@ -5,7 +5,7 @@
 
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web:200,600,700';
 
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500';
 
 /*CSS reset to give a good Cross Border baseline*/
 
@@ -191,29 +191,29 @@ display: block;
 	color: #87bcec;
 }
 /* section padding */
-#about, #faq, #team, #sponsors {
+#about, #schedule, #faq, #team, #sponsors {
 	padding: 5em 4em;
 }
 #about {
-	display: flex;
-	flex-direction: row;
 	background-color: #3b2840;
 	color: #ffffff;
+}
+#about .content .details {
+	float: left;
+
 }
 #about .content p {
 	margin-bottom: 2em;
 }
-#about .content, #about .side-image {
-	flex: 1 1;
-}
 
 #about .side-image {
-	display: flex;
+	
 }
 
 #about .side-image img {
 	margin: auto;
 	height: 500px;
+	display: inline;
 }
 #map {
 	height: 50vh;
@@ -226,6 +226,14 @@ display: block;
 	height: 100%;
 	z-index: 1;
 }
+.map-pointer {
+	/*background-color: #911d1d;*/
+	text-align: center;
+	font: 13px 'Source Sans Pro', sans-serif;
+	line-height: 17px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /* Cheeky map overlay hack */
 .overlay {
 	background:transparent; 
@@ -236,6 +244,82 @@ display: block;
 	margin-top:-50vh;
 	z-index: 5;
 }
+
+
+#schedule {
+	background-color: #3b283f;
+	color: #ffffff;
+}
+#schedule h2{
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+#schedule .table-container {
+	margin: 0;
+	padding: 0;
+}
+
+#schedule .table-block {
+	margin: 10px auto;
+	float: left;
+	width: 45%;
+	display: inline-block;
+	height: 100%;
+}
+@media screen and (max-width: 700px) {
+	#schedule .table-block {
+		width: 100%;
+	}
+}
+#schedule h4 {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #f0dbf4;
+	margin-bottom: 10px;
+}
+#schedule table {
+    width: 100%;
+}
+#schedule .table-block.left {
+	float: left;
+}
+#schedule .table-block.right {
+	float: right;
+	padding-right: 10px;
+}
+@media screen and (max-width: 470px) {
+	#schedule .table-block.left, #schedule .table-block.right {
+		padding: 0;
+	}
+	#schedule td, th {
+		padding: 15px 15px 15px 0 !important;
+	}
+}
+#schedule th {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: bold;
+}
+#schedule b {
+	font-weight: bold;
+	color: #dae6fa;
+}
+#schedule i {
+	font-style: italic;
+}
+#schedule p {
+	text-align: center;
+	padding-bottom: 15px;
+}
+#schedule td, th {
+    border: 1px none #dddddd;
+    text-align: left;
+	border-bottom-style: solid;
+	border-bottom-color: #684d6d;
+	padding: 15px;
+}
+
+
 #faq {
 	color: #24142a;
 	background-color: #edd9f2;
@@ -290,7 +374,7 @@ display: block;
 #team h2{
 	text-align: center;
 }
-#team .team-container {
+#team .team-container .core {
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
@@ -309,16 +393,36 @@ display: block;
 	border-radius: 50%;
 	overflow: hidden;
 }
+#team .member .name {
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	width: 100%;
+	display: block;
+}
+#team .member .description {
+	/*font-weight: 100;	*/
+}
+#team .helpers {
+	margin-top: 55px;
+}
 #sponsors {
 	background-color: #181c24;
 	color: #ffffff;
+}
+#sponsors p{
+	text-align: center;
+	margin: 25px;
 }
 #sponsors img{
 	padding: 1em;
 	background-color: #1d222b;
 	width: 200px;
 	height: 200px;
-	margin: 5px;
+	margin: 10px 5px 5px;
+}
+#sponsors img:hover{
+	background-color: #2b3240;
 }
 .helpers, .partners{
 	margin-right: auto;
@@ -336,9 +440,11 @@ display: block;
 	color: #dfe6ea;
 }
 #main-footer a{
+		margin-left: 10px;
+}
+#main-footer a, #sponsors a{
 	color: #80c3ef;
 	text-decoration: none;
-	margin-left: 10px;
 }
 
 #main-menu .mobile {
@@ -346,8 +452,15 @@ display: block;
 }
 
 /* Media Queries */
+@media screen and (min-width: 1080px) {
+	.content {
+		width: 960px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
 @media screen and (max-width: 1000px) {
-	#team .team-container {
+	#team .team-container .core {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
@@ -364,16 +477,26 @@ display: block;
 		height: auto;
 	}
 }
-
-@media screen and (max-width: 750px) {
-	#about {
-		flex-direction: column;
+@media screen and (min-width:751px){
+	#about .content .details {
+		float: left;
+		width: 50%;
 	}
+}
+@media screen and (max-width: 750px) {
+/*	#about {
+		flex-direction: column;
+	}*/
 	#sponsors {
 		padding: 5em 0;
 	}
-	#about, #faq, #team {
+	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
+	}
+	#about .side-image img {
+		width: 100%;
+		display: none;
+		/* cat begone */
 	}
 }
 
@@ -395,6 +518,7 @@ display: block;
 	#mlh-trust-badge {
 		right: 10px !important;
 	}
+	
 }
 
 /* Extras */
