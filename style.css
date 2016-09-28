@@ -517,9 +517,6 @@ input#mc-embedded-subscribe {
 	padding: 40px;
 	color: #dfe6ea;
 }
-#main-footer a{
-		margin-left: 10px;
-}
 #main-footer a, #sponsors a{
 	color: #80c3ef;
 	text-decoration: none;
@@ -644,4 +641,9 @@ input#mc-embedded-subscribe {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.cat {
+	position: absolute;
+	transition: 10s;
 }
