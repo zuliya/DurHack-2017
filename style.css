@@ -197,22 +197,26 @@ display: block;
 	background-color: #3b2840;
 	color: #ffffff;
 }
-#about .content .details {
-	float: left;
 
+#about .content {
+	display: flex;
+}
+
+#about .details, #about .side-image{
+	flex: 1 1;
 }
 #about .content p {
 	margin-bottom: 2em;
 }
 
 #about .side-image {
-	
+	display: flex;
 }
 
 #about .side-image img {
-	margin: auto;
-	height: 500px;
-	display: inline;
+	margin: auto 0 auto auto;
+	height: 450px;
+	display: block;
 }
 #map {
 	height: 50vh;
@@ -548,7 +552,7 @@ input#mc-embedded-subscribe {
 		max-width: 100px;
 	}
 	#about .side-image img {
-		height: auto;
+		height: 300px;
 	}
 }
 @media screen and (min-width:751px){
@@ -567,7 +571,7 @@ input#mc-embedded-subscribe {
 	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
 	}
-	#about .side-image img {
+	#about .side-image {
 		width: 100%;
 		display: none;
 		/* cat begone */
