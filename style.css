@@ -174,7 +174,7 @@ display: block;
 	/*font-weight: bold;*/
 }
 
-.header-button-wrapper button {
+.header-button-wrapper button, input[type="submit"] {
 	font: bold 0.8em 'Source Sans Pro', sans-serif;
 	text-transform: uppercase;
 	padding: 10px 15px;
@@ -185,9 +185,8 @@ display: block;
 	margin-left: 10px;
 }
 
-.header-button-wrapper button:hover {
+.header-button-wrapper button:hover, input[type="submit"]:hover {
 	border: 2px solid #648fd8;
-		color: #87bcec;
 	color: #87bcec;
 }
 /* section padding */
@@ -266,6 +265,81 @@ display: block;
 	display: inline-block;
 	height: 100%;
 }
+
+#signup-wrapper {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.5s;
+	z-index: 99999999999999;
+}
+
+#signup-form {
+	background-color: #3b2840;
+    color: #ffffff;
+	width: 420px; /* Blaze it */
+	height: auto;
+	margin: auto;
+	padding: 1em;
+}
+
+#signup-form input[type="text"], #signup-form input[type="email"] {
+	float: right;
+	box-sizing: border-box;
+	height: 2.4em;
+	border: none;
+	padding: 7px;
+	width: 250px;
+	outline: none !important;
+	transition: 0.25s;
+}
+
+#signup-form input[type="text"]:focus, #signup-form input[type="email"]:focus {
+	opacity: 0.9;
+}
+
+#signup-form input.email {
+	border-radius: 10px 10px 0 0;
+	border-bottom: 2px solid #3b2840;
+}
+
+#signup-form input.university {
+	border-radius: 0 0 10px 10px;
+	border-top: 2px solid #3b2840;
+}
+
+.signup-close {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 32px;
+	width: 32px;
+}
+
+.mc-field-group {
+	height: 2em;
+	line-height: 2em;
+}
+
+.indicates-required {
+	float: left;
+	margin-top: calc(1.5em + 8px);
+}
+
+#signup-form p {
+	margin-bottom: 1em;
+}
+
+input#mc-embedded-subscribe {
+	margin: 1.5em 0 0 0;
+	display: block;
+	height: auto;
+	float: right;
+}
+
 @media screen and (max-width: 700px) {
 	#schedule .table-block {
 		width: 100%;
@@ -517,6 +591,22 @@ display: block;
 	}
 	#mlh-trust-badge {
 		right: 10px !important;
+	}
+	#signup-form {
+		width: 100%;
+	}
+	#signup-form label {
+		display: block;
+	}
+	#signup-form input[type="text"], #signup-form input[type="email"] {
+		border-radius: 10px;
+		float: none;
+	}
+	.mc-field-group {
+		height: auto;
+	}
+	input#mc-embedded-subscribe, .indicates-required {
+		float: none;
 	}
 	
 }

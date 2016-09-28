@@ -32,7 +32,7 @@
 				</span>
 				<div class="header-button-wrapper">
 					<button onClick="window.location = '#';" href="#">Apply</button>
-					<button onClick="window.location = '#';" href="#">Register for updates</button>
+					<button onClick="signupShow();">Register for updates</button>
 				</div>
 			</div>
 		</header>
@@ -184,7 +184,7 @@
 			<div class="question">
 				<h3>How do I sign up?</h3>
 				<p>Our tickets are managed through Eventbrite. Currently we haven't released any tickets, but we will be soon! If you want to hear about when we release tickets, then sign up to get
-				notifications <a href="#">here.</a></p>
+				notifications <a href="#" onClick="signupShow();">here.</a></p>
 			</div>
 			<div class="question">
 				<h3>What should I bring?</h3>
@@ -278,6 +278,37 @@
 			Made with &lt;3 2016 <a href="https://github.com/tnguyen/durhack">Github</a>
 		</footer>
 		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2017/events?utm_source=eu-2017&utm_medium=TrustBadge&utm_campaign=eu-2017&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+		<div id="signup-wrapper" style="display:none; opacity:0;">
+			<div id="signup-form">
+				<img onClick="signupHide()" src="images/close.png" class="signup-close">
+				<form action="http://durhack.us14.list-manage.com/subscribe/post?u=ee9b5d55cd3684102e8203453&amp;id=c3c26e2a56" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<h2>Subscribe to our mailing list</h2>
+					<p>Get updates on ticket release dates and other stuff - We don't spam and only email you stuff you actually want to know.</p>
+					<div class="mc-field-group">
+						<label for="mce-EMAIL">Email Address:  <span class="asterisk">*</span></label>
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="bill.nye@nature.com">
+					</div>
+					<div class="mc-field-group">
+						<label for="mce-FNAME">Name: </label>
+						<input type="text" value="" name="FNAME" class="name" id="mce-FNAME" placeholder="Bill Nye">
+					</div>
+					<div class="mc-field-group">
+						<label for="mce-UNI">University: </label>
+						<input type="text" value="" name="UNI" class="university" id="mce-UNI" placeholder="Cornell University">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ee9b5d55cd3684102e8203453_c3c26e2a56" tabindex="-1" value=""></div>
+					<div class="clear">
+						<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD70GNb2FLOz3cVO-LpF0Jjk8STZgGZKX0"></script>
 
@@ -339,6 +370,29 @@
 				menucontrol.style.marginBottom = "20px";
 				expanded = true;
 			}
+		}
+		
+		// Signup boxy doo
+		var signupWrapper = document.getElementById("signup-wrapper");
+		function signupShow() {
+			signupWrapper.style.display = "flex";
+			signupWrapper.style.opacity = "0";
+			setTimeout(function(){
+				signupWrapper.style.opacity = "1";
+			},100);
+		}
+		document.getElementById("signup-wrapper").addEventListener("click", function( e ){
+			//Workaround to stop clicks on child closing the window
+			e = window.event || e; 
+			if(this === e.target) {
+				signupHide();
+			}
+		});
+		function signupHide() {
+			setTimeout(function(){
+				signupWrapper.style.display = "none";
+			},500);
+			signupWrapper.style.opacity = "0";
 		}
 	</script>
 </html>
