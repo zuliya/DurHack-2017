@@ -129,7 +129,7 @@ list-style-type: none;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background: #f5f5f5 url('images/bg2.jpg') no-repeat center center fixed;
+	background: #f5f5f5 url('../images/bg2.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -486,6 +486,11 @@ input#mc-embedded-subscribe {
 #sponsors {
 	background-color: #181c24;
 	color: #ffffff;
+	z-index: -0;
+}
+#sponsors .content {
+	/*background-color: #e9b1b1;*/
+	z-index: 999;
 }
 #sponsors p{
 	text-align: center;
@@ -493,9 +498,18 @@ input#mc-embedded-subscribe {
 }
 #sponsors img{
 	padding: 1em;
-	background-color: #1d222b;
+	background-color: rgba(29, 34, 42, 0.63);
 	height: 200px;
 	margin: 10px 5px 5px;
+	z-index: 999;
+}
+canvas.pg-canvas {
+background-color: /*#3f2743*/;
+/*background-color: #171b24;*/
+position: absolute;
+z-index: -99;
+	overflow: hidden;
+
 }
 #sponsors img:hover{
 	background-color: #2b3240;

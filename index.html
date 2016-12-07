@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script type='text/javascript' src='js/particleground.js'></script>
 		<title>DurHack 2017</title>
 	</head>
 
@@ -409,6 +410,17 @@
 				},100);
 			}, 1000);
 		}
+		document.addEventListener('DOMContentLoaded', function () {
+		  var pg = particleground(document.getElementById('sponsors'), {
+			    dotColor: '#364565',
+			    lineColor: '#364565',
+			    maxSpeedX: 0.3,
+			    maxSpeedY: 0.3,
+			    particleRadius: 7,
+			    parallax: false
+			  });
+		  // pg.pause();
+		  }, false);
 	</script>
 </html>
 <!-- 63 6f 70 79 77 72 69 74 65 64 20 62 79 20 79 6f 75 72 20 6d 75 6d -->
