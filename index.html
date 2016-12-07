@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="style.css">
-		<title>DurHack 2016</title>
+		<title>DurHack 2017</title>
 	</head>
 
 	<body>
@@ -19,7 +19,7 @@
 			<li class="menu-item"><a href="#map">Where</a></li>
 			<!-- <li class="menu-item"><a href="#schedule">Schedule</a></li> -->
 			<li class="menu-item"><a href="#faq">FAQ</a></li>
-			<!-- <li class="menu-item"><a href="#team">Crew</a></li> -->
+			<li class="menu-item"><a href="#team">Crew</a></li>
 			<li class="menu-item"><a href="#sponsors">Sponsors</a></li>
 		</ul>
 		<header id="main-header">
@@ -167,9 +167,8 @@
 			<h2>FAQ</h2>
 			<div class="question">
 				<h3>What is Durhack?</h3>
-				<p>Durhack is a Hackathon taking place in Durham, UK on the 21st January. It's taking place in the
-				<a href="https://www.google.com/maps/place/Durham+Students'+Union/@54.7732235,-1.5738356,17z/data=!3m1!4b1!4m5!3m4!1s0x487e87626481748d:0x3a5d3218efbacb98!8m2!3d54.7732235!4d-1.5716469?hl=en">Durham
-				Students Union</a> and is open to students everywhere! For 24 hours, we will provide an internet connection, food, and power while you and a team create something cool.
+				<p>Durhack is a Hackathon taking place in Durham, UK on the 28th of January. It's taking place in the
+				<a href="https://www.google.com/maps/place/Department+of+Engineering+%26+Computing+Sciences/">Engineering Building</a>, and is open to students everywhere! For 24 hours, we will provide an internet connection, food, and power while you and a team create something cool.
 			</div>
 			<div class="question">
 				<h3>What is a Hackathon?</h3>
@@ -309,11 +308,11 @@
 
 	<script type="text/javascript">
 		function init_map(){
-			var myOptions = {zoom:15,center:new google.maps.LatLng(54.773180, -1.571733),mapTypeId: google.maps.MapTypeId.ROADMAP};
+			var myOptions = {zoom:15,center:new google.maps.LatLng(54.7672509, -1.5725684),mapTypeId: google.maps.MapTypeId.ROADMAP};
 			map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
-			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(54.773180, -1.571733)});
+			marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(54.7672509, -1.5725684)});
 			infowindow = new google.maps.InfoWindow({
-				content: '<div class="map-pointer"><strong>Durham Students\' Union</strong><br>New Elvet<br>Durham</div>',
+				content: '<div class="map-pointer"><strong>School of Engineering<br>and Computing Sciences</strong><br>Durham University</div>',
 				maxWidth: 150
 			});
 			google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
