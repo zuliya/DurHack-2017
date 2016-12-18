@@ -519,6 +519,10 @@ input#mc-embedded-subscribe {
 	margin: 10px 5px 5px;
 	z-index: 999;
 }
+#sponsors .partners img {
+	max-height: 200px;
+	height: auto;
+}
 canvas.pg-canvas {
 background-color: /*#3f2743*/;
 /*background-color: #171b24;*/
@@ -544,19 +548,8 @@ z-index: -99;
 .partners:hover{
 	background-color: #2b3240;
 }
-.partners a{
-
-}
-.partners img {
-/*overflow: hidden; 
-	/*width: 93.3%;*!/
-	/*background-color: rgba(45, 53, 66, 0.63);*!/
-	display: inline-block;
-	margin-right: auto;
-	margin-left: auto;*/
-}
 .partners a img:hover{
-	background-color: rgba(255, 255, 255, 0) !important;
+	background-color: rgba(255, 255, 255, 0);
 }
 .cooler_helpers img {
 	background-color: rgba(40, 47, 58, 0.63);	width: 28%;
@@ -639,9 +632,8 @@ z-index: -99;
 	#sponsors {
 		padding: 5em 0;
 	}
-	.partners img{
-		height: 150px;
-		width: 90%;
+	#sponsors .partners img {
+		max-height: 125px;
 	}
 	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
@@ -654,8 +646,32 @@ z-index: -99;
 }
 
 @media screen and (max-width: 470px) {
-	.partners{
-		background-color: #171b24;
+	.partners {
+		background-color: transparent;
+		height: 200px;
+		width: 100%;
+	}
+	.partners:hover{
+		background-color: transparent;
+	}
+	/* i'm going to hell for this hack */
+	.partners .behave {
+		height: 200px;
+		width: 200px;
+		background-color: rgba(45, 53, 66, 0.4);
+		margin: 0 auto;
+		display: flex;
+		background-image: url('../images/sponsors/dcc.svg');
+		background-position: center;
+		background-size: 280px auto;
+		background-repeat: no-repeat;
+		padding: 0 15px;
+	}
+	.partners .behave:hover{
+		background-color: #2b3240;
+	}
+	#sponsors .partners img {
+		display: none; /* lol */
 	}
 	#sponsors img{
 		padding: 1em;
