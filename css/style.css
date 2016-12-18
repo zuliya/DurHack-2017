@@ -539,6 +539,9 @@ z-index: -99;
 	margin-right: auto;
 	margin-left: auto;*/
 }
+.partners a img:hover{
+	background-color: rgba(255, 255, 255, 0) !important;
+}
 .cooler_helpers img {
 	background-color: rgba(40, 47, 58, 0.63);	width: 28%;
 }
