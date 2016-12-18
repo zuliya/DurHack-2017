@@ -306,9 +306,10 @@ display: block;
 	background-color: #3b2840;
     color: #ffffff;
 	width: 420px; /* Blaze it */
-	height: auto;
+	height: 395px;
 	margin: auto;
 	padding: 1em;
+	box-sizing: border-box;
 }
 
 #signup-form input[type="text"], #signup-form input[type="email"] {
