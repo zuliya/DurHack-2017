@@ -563,9 +563,10 @@ z-index: -99;
 }
 #main-footer {
 	text-align: center;
-	background-color: #181c24;
 	padding: 40px;
 	color: #dfe6ea;
+	z-index: 1;
+	background-color: rgba(22, 26, 36, 0.98);
 }
 #main-footer a, #sponsors a{
 	color: #80c3ef;
