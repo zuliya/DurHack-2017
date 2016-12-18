@@ -231,8 +231,13 @@ display: block;
 	background-color: #835f8b;
 	color: #d0b9d8;
 	z-index: -0;
-	padding: 40px 25px;
+	padding: 40px 20px;
 	text-align: center;
+}
+#dataset .content{
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
 }
 #map {
 	height: 50vh;
