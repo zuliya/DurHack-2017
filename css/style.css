@@ -498,7 +498,7 @@ input#mc-embedded-subscribe {
 }
 #sponsors img{
 	padding: 1em;
-	background-color: rgba(29, 34, 42, 0.63);
+	/*background-color: rgba(29, 34, 42, 0.63);*/
 	height: 200px;
 	margin: 10px 5px 5px;
 	z-index: 999;
@@ -509,15 +509,42 @@ background-color: /*#3f2743*/;
 position: absolute;
 z-index: -99;
 	overflow: hidden;
-	width: 93%;
+	width: 90%;
+	right: 0;
 }
 #sponsors img:hover{
 	background-color: #2b3240;
 }
-.helpers, .partners{
+.helpers, .partners, .cooler_helpers{
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
+}
+.partners {
+	width: 96.8%;
+	background-color: rgba(45, 53, 66, 0.63);
+	text-align: center;
+}
+.partners:hover{
+	background-color: #2b3240;
+}
+.partners a{
+
+}
+.partners img {
+/*overflow: hidden; 
+	/*width: 93.3%;*!/
+	/*background-color: rgba(45, 53, 66, 0.63);*!/
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;*/
+}
+.cooler_helpers img {
+	background-color: rgba(40, 47, 58, 0.63);	width: 28%;
+}
+.helpers a img{
+	background-color: rgba(29, 34, 42, 0.63);
+	width: 28%;
 }
 #sponsors h2{
 	text-align: center;
@@ -563,6 +590,9 @@ z-index: -99;
 	#about .side-image img {
 		height: 300px;
 	}
+	.cooler_helpers img {
+	width: 24%;
+	}
 }
 @media screen and (min-width:751px){
 	#about .content .details {
@@ -589,6 +619,10 @@ z-index: -99;
 	#sponsors {
 		padding: 5em 0;
 	}
+	.partners img{
+		height: 150px;
+		width: 90%;
+	}
 	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
 	}
@@ -600,6 +634,9 @@ z-index: -99;
 }
 
 @media screen and (max-width: 470px) {
+	.partners{
+		background-color: #171b24;
+	}
 	#sponsors img{
 		padding: 1em;
 		background-color: #1d222b;
