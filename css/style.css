@@ -535,6 +535,9 @@ z-index: -99;
 #sponsors img:hover{
 	background-color: #2b3240;
 }
+#sponsors .partners img:hover {
+	background-color: transparent;
+}
 .helpers, .partners, .cooler_helpers{
 	margin-right: auto;
 	margin-left: auto;
@@ -650,6 +653,7 @@ z-index: -99;
 		background-color: transparent;
 		height: 200px;
 		width: 100%;
+		margin: 0 0 5px;
 	}
 	.partners:hover{
 		background-color: transparent;
