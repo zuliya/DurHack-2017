@@ -141,6 +141,9 @@ list-style-type: none;
 	width: auto;
 	text-align: center;
 }
+i {
+	font-style: italic;
+}
 
 .header-button-wrapper {
 	margin-top: 10px;
@@ -229,7 +232,6 @@ display: block;
 	color: #d0b9d8;
 	z-index: -0;
 	padding: 40px 25px;
-	font-style: italic;
 	text-align: center;
 }
 #map {
