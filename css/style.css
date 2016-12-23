@@ -517,6 +517,8 @@ input#mc-embedded-subscribe {
 
 #tickets table{
 	margin: 1em auto;
+	width: 90%;
+	text-align: left;
 }
 
 #tickets table tr th {
