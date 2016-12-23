@@ -199,7 +199,7 @@ display: block;
 	color: #87bcec;
 }
 /* section padding */
-#about, #schedule, #faq, #team, #sponsors {
+#about, #schedule, #faq, #team, #sponsors, #tickets {
 	padding: 5em 4em;
 }
 #about {
@@ -274,11 +274,11 @@ display: block;
 	background-color: #3b283f;
 	color: #ffffff;
 }
-#schedule h2{
+#schedule h2, #tickets h2{
 	text-align: center;
 	margin-bottom: 0.5em;
 }
-#schedule .table-container {
+#schedule .table-container, #tickets .table-container {
 	margin: 0;
 	padding: 0;
 }
@@ -499,6 +499,34 @@ input#mc-embedded-subscribe {
 #team .helpers {
 	margin-top: 55px;
 }
+#tickets {
+	background-color: #835f8b;
+	color: #fff;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+#tickets a {
+	color: lightblue;
+	text-decoration: none;
+}
+
+#tickets a:hover {
+	text-decoration: underline;
+}
+
+#tickets table{
+	margin: 1em auto;
+}
+
+#tickets table tr th {
+	font-weight: 800;
+}
+
+#tickets table tr td {
+	padding: 0.75em;
+}
+
 #sponsors {
 	background-color: #181c24;
 	color: #ffffff;
