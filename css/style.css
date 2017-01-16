@@ -373,6 +373,7 @@ input#mc-embedded-subscribe {
 }
 #schedule table {
     width: 100%;
+    line-height: 1.25em;
 }
 #schedule .table-block.left {
 	float: left;
