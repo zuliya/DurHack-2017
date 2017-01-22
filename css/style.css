@@ -239,6 +239,14 @@ display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
+#dataset h1 a {
+    color: #FFF;
+    text-decoration: none;
+}
+#dataset h1 a:hover {
+    text-decoration: underline;
+}
+
 #map {
 	height: 50vh;
 }
