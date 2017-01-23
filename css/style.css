@@ -239,6 +239,13 @@ display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
+#dataset .content img{
+    max-height: 50px;
+    height: auto;
+    width: 23%;
+    padding: 1em;
+    margin: 10px 5px 5px
+}
 #dataset h1 a {
     color: #FFF;
     text-decoration: none;
