@@ -1,5 +1,5 @@
 /*
-68 74 74 70 3a 2f 2f 69 2e 69 6d 67 75 72 2e 63 6f 6d 2f 79 53 66 44 75 37 63 2e 6a 70 67 
+68 74 74 70 3a 2f 2f 69 2e 69 6d 67 75 72 2e 63 6f 6d 2f 79 53 66 44 75 37 63 2e 6a 70 67
 */
 
 
@@ -23,8 +23,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 margin: 0;
@@ -36,7 +36,7 @@ vertical-align: baseline;
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 display: block;
 }
@@ -103,7 +103,7 @@ font-family: 'Titillium Web', sans-serif;
 	transition: 1s background-color;
 	/*background-color: rgba(0, 0, 0, 0.74);*/
 }
-#main-menu li { 
+#main-menu li {
 	display: inline-block;
 	list-style-type: none;
 	margin-right: 10px;
@@ -275,11 +275,11 @@ display: block;
 }
 /* Cheeky map overlay hack */
 .overlay {
-	background:transparent; 
-	position:relative; 
+	background:transparent;
+	position:relative;
 	width:100%;
 	height:50vh;
-	top: 50vh;  
+	top: 50vh;
 	margin-top:-50vh;
 	z-index: 5;
 }
@@ -402,7 +402,7 @@ input#mc-embedded-subscribe {
 		padding: 0;
 	}
 	#schedule td, th {
-		padding: 15px 15px 15px 0 !important;
+		padding: 150px 150px 150px 0 !important;
 	}
 }
 #schedule th {
@@ -766,7 +766,7 @@ z-index: -99;
 	input#mc-embedded-subscribe, .indicates-required {
 		float: none;
 	}
-	
+
 }
 
 /* Extras */
@@ -804,5 +804,3 @@ z-index: -99;
 	position: absolute;
 	transition: 10s;
 }
-
- 
