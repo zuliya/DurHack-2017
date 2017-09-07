@@ -111,7 +111,7 @@ font-family: 'Titillium Web', sans-serif;
 	transition: 0.5s height;
 }
 #main-menu li a{
-	color: #000000;
+	color: #FFFFFF;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -129,7 +129,7 @@ list-style-type: none;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background: #f5f5f5 url('../images/bg2.jpg') no-repeat center center fixed;
+	background: #f5f5f5 url('../images/bg1.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -161,28 +161,42 @@ i {
         animation: fadein 1s;
 }
 
-.logotext, .header-info, .header-button-wrapper {
+.logotext, /*.header-info*/, .header-button-wrapper {
 	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
 	   -moz-animation: fadein 3s; /* Firefox < 16 */
 	    -ms-animation: fadein 3s; /* Internet Explorer */
 	     -o-animation: fadein 3s; /* Opera < 12.1 */
 	        animation: fadein 3s;
 }
+
 .logotext {
 display: block;
 	height: 65px;
-	margin: 5px auto;
+	margin: 10px auto;
 }
 
 .header-info {
-	font-size: 150%;
-	color: rgb(126, 49, 123);
+	/*font-size: 100%;
+	color: rgb(255, 255, 000);
+
 	margin-bottom: 10px;
 	height: 50px;
-	display: block;
+ display: block;
 
-	font-weight: 7000;
-	/*font-weight: bold;*/
+
+	font-weight: 1000;
+	padding: 10px 10px; */
+	height: 100px;
+	display: block;
+	margin: 5px auto;
+-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+     -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+
+
+
 }
 
 .header-button-wrapper button, input[type="submit"] {
@@ -190,8 +204,8 @@ display: block;
 	text-transform: uppercase;
 	font-weight: 7000;
 	padding: 10px 10px;
-	background-color: rgba(255, 255, 255, 0);
-	border: 2px solid #000000;
+	background-color: #FFFFFF;
+	border: 2px solid #FFFFFF;
 	color: F0F8FF;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -199,15 +213,36 @@ display: block;
 
 .header-button-wrapper button:hover, input[type="submit"]:hover {
 	border: 2px solid #648fd8;
-	color: #87bcec;
+	color: #603c81;
+
+
 }
 /* section padding */
 #about, #schedule, #faq, #team, #sponsors, #tickets {
 	padding: 5em 4em;
 }
+
 #about {
-	background-color: #9bb3e1;
-	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+}
+
+#about .page-bg
+{
+	background: #f5f5f5 url('../images/bg2.jpg') no-repeat center center fixed;
+	-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #about .content {
@@ -435,7 +470,7 @@ input#mc-embedded-subscribe {
 
 #faq {
 	color: #24142a;
-	background-color: #A691FF;
+	background-color: #a5bae4;
 }
 #faq a{
 	color: #2462cd;
@@ -488,10 +523,20 @@ input#mc-embedded-subscribe {
 	text-align: center;
 }
 #team .team-container .core {
+	/*margin-right: auto;
+	margin-left: auto;
+
+	width: 150%;
+	height: 150%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center; */
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
 	display: flex;
+
 }
 #team .member {
 	width: 12%;
@@ -499,13 +544,30 @@ input#mc-embedded-subscribe {
 	margin: 10px;
 	text-align: center;
 	flex: 1 1;
+
+	/*display: center;
+	display: block;
+    margin: auto;
+    width: 40%;*/
+	/*align-items: center;
+	justify-content: center;*/
 }
 #team .member img {
-	width: 100%;
+	/* width: 100%;
+	height: 100%;
 	margin: auto;
-	border-radius: 50%;
+	border-radius: 10%;
 	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;*/
+width: 100%;
+margin: auto;
+border-radius: 50%;
+overflow: hidden;
 }
+
 #team .member .name {
 	font-weight: bold;
 	margin-top: 8px;
@@ -518,6 +580,17 @@ input#mc-embedded-subscribe {
 }
 #team .helpers {
 	margin-top: 55px;
+
+	/* margin-bottom: 10px;
+	height: 50px;
+
+	display: center;
+	align-items: center;
+	justify-content: center; */
+
+	margin-top: 55px;
+
+
 }
 #tickets {
 	background-color: #835f8b;
@@ -592,6 +665,7 @@ z-index: -99;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
+
 }
 .partners {
 	width: 96.8%;
@@ -607,9 +681,12 @@ z-index: -99;
 .cooler_helpers img {
 	background-color: rgba(40, 47, 58, 0.63);	width: 28%;
 }
+
 .helpers a img{
 	background-color: rgba(29, 34, 42, 0.63);
 	width: 23%;
+
+
 }
 #sponsors h2{
 	text-align: center;
@@ -662,7 +739,8 @@ z-index: -99;
 }
 @media screen and (min-width:751px){
 	#about .content .details {
-		colour #000000;
+		color: #ffffff;
+
 		float: left;
 		width: 50%;
 	}
@@ -673,7 +751,7 @@ z-index: -99;
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-		background: #f5f5f5 url('../images/bg2.jpg') no-repeat center center fixed;
+		background: #f5f5f5 url('../images/bg1.jpg') no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -691,6 +769,7 @@ z-index: -99;
 	}
 	#about, #faq, #team, #sponsors, #schedule {
 		padding: 5em 1.5em;
+
 	}
 	#about .side-image {
 		width: 100%;

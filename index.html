@@ -27,20 +27,28 @@
 			<div class="header-content-wrapper">
 				<img class="logo" src="images/shield.svg">
 				<img class="logotext" src="images/logo.svg">
-				<span class="header-info">
-					<b> 2-3 December 2017</b><br>
+				<img class="header-info" src="images/logo2.png">
+
+
+			<!--<span class="header-info">
+					<b> 9-10 December 2017</b><br>
 					Durham University
+
+
 				</span>
+			-->
+
 				<div class="header-button-wrapper">
  					<button onClick="window.location = 'https://www.eventbrite.com/e/durhack-2017-tickets-30426441305';" href="https://www.eventbrite.com/e/durhack-2017-tickets-30426441305">Apply</button>
-					<button onClick="signupShow();">Register for updates</button>
+				<!--	<button onClick="signupShow();">Register for updates</button> -->
 				</div>
 			</div>
 		</header>
 		<section id="about">
 			<div class="content">
 				<div class="details">
-					<h2>What?</h2>
+
+					<h1>What is a Hakathon?</h1>
 					<h3>A Data-Fueled Hackathon Experience</h3>
 					<p>From the 2nd to the 3rd of December, with satellite data at your disposal, solve some of the challenges facing the city, and win prizes with your creativity!
                         We'll supply you with mentoring, swag, drinks, and food -- everything you need to create something cool! (Yes, I purposely made those lines rhyme. I've always wanted to be a rapper.)</p>
@@ -48,10 +56,14 @@
 					<p>The Christopherson Building. Where the engineers make magic.<br>It's on the Science Site, next to the multicoloured, circular Calman Learning Centre.</p>
 					<h3>Here For You <3</h3>
 					<p>Durhack is organized by a committed team of students from the university, who are dedicated to making sure everything runs smoothly. Feel free to reach out to us <a href="mailto:contact@durhack.com" style="color:lightblue;">here.</a></p>
+
 				</div>
-				<div class="side-image">
+				<div class="page-bg">
+</div>
+				<!-- <div class="side-image">
 					<img src="images/cropped.jpg" width="80%" height="auto" alt="Labs in Christopherson">
 				</div>
+
 			</div>
 		</section>
 		<section id="dataset">
@@ -65,8 +77,14 @@
 		<section id="map">
 			<div class="overlay" onClick="style.pointerEvents='none'"></div>
 			<div id="gmap-canvas"></div>
+		-->
 		</section>
 		<section id="schedule">
+
+		</div>
+		<div class="page-bg">
+</div>
+
 			<div class="content">
 				<h2>Schedule</h2>
 				<div class="table-container">
@@ -258,40 +276,50 @@
 				<div class="team-container">
 				    <div class="core">
 						<div class="member">
-							<img src="images/squad/fatema.jpg">
-							<span class="name">Fatema</span>
+
+
+
+						<div class="member">
+							<img src="images/squad/Alex.jpg">
+							<span class="name">Alex</span>
+
 						</div>
 						<div class="member">
-							<img src="images/squad/jack.jpg">
-							<span class="name">Jack</span>
-						</div>
-						<div class="member">
-							<img src="images/squad/james.jpg">
-							<span class="name">James</span>
-						</div>
-						<div class="member">
-							<img src="images/squad/mitchel.jpg">
-							<span class="name">Mitchel</span>
-						</div>
-						<div class="member">
-							<img src="images/squad/sara.jpg">
+							<img src="images/squad/Sara.jpg">
 							<span class="name">Sara</span>
 						</div>
+
 						<div class="member">
-							<img src="images/squad/tn.jpg">
-							<span class="name">Thien</span>
+							<img src="images/squad/Zulia.jpg">
+							<span class="name">Zulia</span>
+						</div>
+
+						<div class="member">
+							<img src="images/squad/Vivek.jpg">
+							<span class="name">Vivek</span>
+						</div>
+
+						<div class="member">
+							<img src="images/squad/Robbie.jpg">
+							<span class="name">Robbie</span>
 						</div>
 					</div>
-					<p class="helpers">
-					Come say 'hi' to us!
-					</p>
+
+
+					<div class="helpers">
+						<p>
+					Come say 'Hi' to us!
+				</p>
+					</div>
+
+
 				</div>
 			</div>
 		</section>
 		<section id="sponsors">
 		<div class="content">
 			<h2>Our Sponsors</h2>
-<p>Interested in Sponsoring? <a href="mailto:contact@durhack.com">Contact Us</a></p>
+<p>Interested in Sponsoring? <a href="alex.greenen@durham.ac.uk">Contact Us</a></p>
 
 
 			<div class="partners">
@@ -308,8 +336,9 @@
 			</div>
 			<div class="helpers">
 			<a href="http://barclays.com" target="_blank"><img src="images/sponsors/b.svg"/></a>
-			<a href="http://www.sunderlandsoftwarecity.com" target="_blank"><img src="images/sponsors/ssc.svg"/></a>
-                <a href="http://microsoft.com" target="_blank"><img src="images/sponsors/ms.svg"/></a>
+			 <!-- <a href="http://www.sunderlandsoftwarecity.com" target="_blank"><img src="images/sponsors/ssc.svg"/></a>
+                <a href="http://microsoft.com" target="_blank"><img src="images/sponsors/ms.svg"/></a> -->
+
 
 				<a href="http://www.entrepreneursdurham.com/" target="_blank"><img src="images/sponsors/ed.svg"></a>
 
@@ -325,7 +354,7 @@
 			&nbsp;-&nbsp;<a href="#" onClick="cats()">&#9679;</a>
 		</footer>
 		</body>
-		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2018/events?utm_source=eu-2017&utm_medium=TrustBadge&utm_campaign=eu-2018&utm_content=white" target="_blank"><img src="images/sponsors/mlh-shield-purple.svg" alt="Major League Hacking 2018 Hackathon Season" style="width:100%"></a>
+	<!--	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2018/events?utm_source=eu-2017&utm_medium=TrustBadge&utm_campaign=eu-2018&utm_content=white" target="_blank"><img src="images/sponsors/mlh-shield-purple.svg" alt="Major League Hacking 2018 Hackathon Season" style="width:100%"></a> -->
 			<div id="signup-wrapper" style="display:none; opacity:0;">
 			<div id="signup-form">
 				<img onClick="signupHide()" src="images/close.png" class="signup-close">
