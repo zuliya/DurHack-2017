@@ -323,11 +323,16 @@ display: block;
 	z-index: 5;
 }
 
-
 #schedule {
-	background-color: #603c81;
+
+	background: #f5f5f5 url('../images/bg3.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	color: #ffffff;
 }
+
 #schedule h2, #tickets h2{
 	text-align: center;
 	margin-bottom: 0.5em;
@@ -469,8 +474,12 @@ input#mc-embedded-subscribe {
 
 
 #faq {
-	color: #24142a;
-	background-color: #a5bae4;
+	background: #f5f5f5 url('../images/bg4.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #ffffff;
 }
 #faq a{
 	color: #2462cd;
@@ -516,8 +525,14 @@ input#mc-embedded-subscribe {
 	text-decoration: underline;
 }
 #team {
-	background-color: #282828;
-	color: #ffffff;
+
+	background: #f5f5f5 url('../images/bg5.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+
 }
 #team h2{
 	text-align: center;
@@ -680,11 +695,14 @@ z-index: -99;
 }
 .cooler_helpers img {
 	background-color: rgba(40, 47, 58, 0.63);	width: 28%;
+
 }
 
 .helpers a img{
 	background-color: rgba(29, 34, 42, 0.63);
 	width: 23%;
+
+
 
 
 }
