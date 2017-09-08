@@ -587,11 +587,11 @@ overflow: hidden;
 	font-weight: bold;
 	margin-top: 8px;
 	margin-bottom: 5px;
-	width: 100%;
+	width: 200%;
 	display: block;
 }
 #team .member .description {
-	/*font-weight: 100;	*/
+	font-weight: 1000;
 }
 #team .helpers {
 	margin-top: 55px;
