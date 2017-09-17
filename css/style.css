@@ -193,10 +193,12 @@ i {
   font-size: 150%;
   font-weight: 1000;
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #8C26E0;
   padding: 10px 10px;
   height: 50px;
   display: block;
   margin: 5px auto;
+
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s;
@@ -214,6 +216,7 @@ i {
   font-weight: 7000;
   padding: 10px 10px;
   background-color: #FFFFFF;
+
   border: 2px solid #FFFFFF;
   color: F0F8FF;
   margin-right: 10px;
@@ -600,6 +603,7 @@ input#mc-embedded-subscribe {
   margin: 10px;
   text-align: center;
   flex: 1 1;
+  color: rgba(255,255,255);
   /*display: center;
 	display: block;
     margin: auto;
@@ -630,6 +634,8 @@ input#mc-embedded-subscribe {
   margin-bottom: 5px;
   width: 200%;
   display: block;
+  color: #ffffff;
+
 }
 
 #team .member .description {
@@ -638,13 +644,8 @@ input#mc-embedded-subscribe {
 
 #team .helpers {
   margin-top: 55px;
-  /* margin-bottom: 10px;
-	height: 50px;
-
-	display: center;
-	align-items: center;
-	justify-content: center; */
   margin-top: 55px;
+  color: #ffffff
 }
 
 #tickets {
@@ -729,10 +730,20 @@ canvas.pg-canvas {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+
 }
 
 .partners {
-  width: 96.8%;
+  /*basic reset
+  margin: 0;
+   padding: 0;}
+
+  adding a black bg to the body to make things clearer
+  body {background: black;}
+  canvas {display: block;} */
+
+  idth: 96.8%;
+
   background-color: rgba(45, 53, 66, 0.63);
   text-align: center;
 }
@@ -798,6 +809,8 @@ canvas.pg-canvas {
     flex: auto;
     display: flex;
     flex-direction: column;
+
+
   }
   #team .member img {
     max-width: 100px;

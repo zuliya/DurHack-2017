@@ -27,7 +27,7 @@
 	</ul>
 	<header id="main-header">
 		<div class="header-content-wrapper">
-			<img class="logo" src="images/shield.svg">
+			<img class="logo" src="images/shield.png">
 			<img class="logotext" src="images/logo.png">
 			<!-- <img class="header-info" src="images/logo2.png"> 		-->
 
@@ -52,7 +52,7 @@
 		<div class="content">
 			<div class="details">
 
-				<h1>What is a Hakathon?</h1>
+				<h1>What is a Hackathon?</h1>
 				<h3>A Data-Fueled Hackathon Experience</h3>
 				<p>From the 9th to the 10th of December, with satellite data at your disposal, solve some of the challenges facing the city, and win prizes with your creativity! We'll supply you with mentoring, swag, drinks, and food -- everything you need to create
 					something cool! (Yes, I purposely made those lines rhyme. I've always wanted to be a rapper.)</p>
@@ -65,14 +65,14 @@
 			<div class="page-bg">
 			</div>
 			 <div class="side-image">
-					<img src="images/hackathon-graphic.png" width="80%" height="auto" alt="Hakathon robot">
+					<img src="images/hackathon-graphic.png" width="80%" height="auto" alt="hackathon robot">
 				</div>
 
 			</div>
 		</section>
 		<section id="dataset">
 			<div class="content">
-			   <h2>The hakathon will be hosted here </h2>
+			   <h2>The hackathon will be hosted here </h2>
 			    <!--  <a href="http://sedas.satapps.org/"><img src="images/sponsors/SDS.svg"></a>
 			    <a href="https://datamillnorth.org/dataset?organization=durham-county-council"><img src="images/sponsors/DMN.svg"></a>
 			    <a href="http://earthexplorer.usgs.gov/"><img src="images/sponsors/USGS.svg"></a>  -->
@@ -342,6 +342,7 @@
 
 
 			<div class="partners">
+
 				<a href="http://durham.gov.uk" target="_blank">
 					<div class="behave">
 						<img src="images/sponsors/dcc.svg" />
@@ -349,6 +350,7 @@
 				</a>
 			</div>
 			<div class="cooler_helpers">
+
 				<a href="http://github.com" target="_blank"><img src="images/sponsors/gh.svg" class="l"/></a>
 				<a href="http://waterstons.com" target="_blank"><img src="images/sponsors/ws.svg" class="m"/></a>
 				<!-- <a href="http://mlh.io" target="_blank"><img src="images/sponsors/mlh.svg" class="r"/></a><br> -->
@@ -408,28 +410,36 @@
 </body>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD70GNb2FLOz3cVO-LpF0Jjk8STZgGZKX0"></script>
 
+
 <script type="text/javascript">
+
+	// map of Engineering School
 	function init_map() {
-		var myOptions = {
+		 var myOptions = {
 			zoom: 15,
+			// 54.767249, -1.570387 this is School of engineering map
 			center: new google.maps.LatLng(54.767249, -1.570387),
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+
 		map = new google.maps.Map(document.getElementById("gmap-canvas"), myOptions);
 		marker = new google.maps.Marker({
 			map: map,
 			position: new google.maps.LatLng(54.767249, -1.570387)
 		});
+
 		infowindow = new google.maps.InfoWindow({
 			content: '<div class="map-pointer"><strong>School of Engineering<br>and Computing Sciences</strong><br>Durham University</div>',
 			maxWidth: 150
 		});
-		google.maps.event.addListener(marker, "click", function() {
+
+	google.maps.event.addListener(marker, "click", function() {
 			infowindow.open(map, marker);
 		});
 		infowindow.open(map, marker);
 	}
-	google.maps.event.addDomListener(window, 'load', init_map);
+
+google.maps.event.addDomListener(window, 'load', init_map);
 
 	// Fade header code
 	var header = document.getElementById("main-header");
@@ -447,7 +457,6 @@
 			faded = false;
 		}
 	}
-
 	//Menu scrolly uppy downy
 	var expanded = false;
 	var menuitems = document.getElementsByClassName("menu-item");
@@ -503,6 +512,8 @@
 		signupWrapper.style.opacity = "0";
 	}
 
+	// cat button
+
 	function cats() {
 		setInterval(function() {
 			var cat = document.createElement("div");
@@ -524,8 +535,10 @@
 			}, 100);
 		}, 1000);
 	}
+	/*
 	document.addEventListener('DOMContentLoaded', function() {
 		var pg = particleground(document.getElementById('sponsors'), {
+
 			dotColor: '#364565',
 			lineColor: '#364565',
 			maxSpeedX: 0.3,
@@ -534,7 +547,63 @@
 			parallax: false
 		});
 		//		    pg.pause();
-	}, false);
+	}, false); */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+var c = particleground (document.getElementById("sponsors"), {
+
+var ctx = c.getContext("2d");
+
+//making the canvas full screen
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+
+//chinese characters - taken from the unicode charset
+var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+//converting the string into an array of single characters
+chinese = chinese.split("");
+
+var font_size = 10;
+var columns = c.width/font_size; //number of columns for the rain
+//an array of drops - one per column
+var drops = [];
+//x below is the x coordinate
+//1 = y co-ordinate of the drop(same for every drop initially)
+for(var x = 0; x < columns; x++)
+	drops[x] = 1;
+
+//drawing the characters
+function draw()
+{
+	//Black BG for the canvas
+	//translucent BG to show trail
+	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+	ctx.fillRect(0, 0, c.width, c.height);
+
+	ctx.fillStyle = "#0F0"; //green text
+	ctx.font = font_size + "px arial";
+	//looping over drops
+	for(var i = 0; i < drops.length; i++)
+	{
+		//a random chinese character to print
+		var text = chinese[Math.floor(Math.random()*chinese.length)];
+		//x = i*font_size, y = value of drops[i]*font_size
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+		//sending the drop back to the top randomly after it has crossed the screen
+		//adding a randomness to the reset to make the drops scattered on the Y axis
+		if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			drops[i] = 0;
+
+		//incrementing Y coordinate
+		drops[i]++;
+	}
+}
+
+setInterval(draw, 33) })
+
+
 </script>
 
 </html>
