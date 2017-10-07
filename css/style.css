@@ -131,6 +131,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: flex;
   background: #f5f5f5 url('../images/bg1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -681,7 +682,7 @@ input#mc-embedded-subscribe {
 }
 
 #sponsors {
-  background-color: #181c24;
+  background: #f5f5f5 url('../images/bg6.gif');
   color: #ffffff;
   z-index: -0;
 }
