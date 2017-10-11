@@ -826,7 +826,7 @@ canvas.pg-canvas {
   }
 }
 
-@media screen and (min-width:751px) {
+@media screen and (min-width:75px) {
   #about .content .details {
     color: #ffffff;
     float: left;
