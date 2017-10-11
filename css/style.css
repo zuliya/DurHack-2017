@@ -191,7 +191,7 @@ i {
 }
 
 .header-info {
-  font-family: "Times New Roman", Times, serif;
+
   font-size: 150%;
   font-weight: 1000;
   color: rgb(255, 255, 255);
@@ -213,7 +213,7 @@ i {
 }
 
 .header-button-wrapper button, input[type="submit"] {
-font-family: "Times New Roman", Times, serif;
+
   /*font: 0.8em 'Source Sans Pro', sans-serif; */
   text-transform: uppercase;
   font-weight: 7000;
