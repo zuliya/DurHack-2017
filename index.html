@@ -43,7 +43,8 @@
 			<div class="header-button-wrapper">
 				<button onClick="window.location = 'https://www.eventbrite.com/e/durhack-20172018-tickets-36245834266';" href="https://www.eventbrite.com/e/durhack-20172018-tickets-36245834266">Apply</button>
 
-				<button onClick="window.location = 'https://www.facebook.com/DurHack2017';" href="https://www.facebook.com/DurHack2017">Sign up for updates</button>
+				<button onClick="window.location = 'https://www.facebook.com/DurhackEvent/';" href="https://www.facebook.com/DurhackEvent/
+				">Sign up for updates</button>
 				<!--	<button onClick="signupShow();">Register for updates</button> -->
 			</div>
 		</div>
@@ -59,7 +60,7 @@
 				<h3>Venue</h3>
 				<p>The Christopherson Building. Where the engineers make magic.<br>It's on the Science Site, next to the multicoloured, circular Calman Learning Centre.</p>
 				<h3>Here For You <3</h3>
-				<p>Durhack is organized by a committed team of students from the university, who are dedicated to making sure everything runs smoothly. Feel free to reach out to us <a href="team@durhack.com" style="color:lightblue;">here.</a></p>
+				<p>Durhack is organized by a committed team of students from the university, who are dedicated to making sure everything runs smoothly. Feel free to reach out to us <a href="support@hackerearth.com" style="color:lightblue;">here.</a></p>
 
 			</div>
 			<div class="page-bg">
@@ -274,9 +275,9 @@
 			</div>
 			<div class="question last-question">
 				<h3>What if I have more questions?</h3>
-				<p>We'll be happy to answer. Contact us by email at <a href="team@durhack.com">contactDurhack</a>, ping us on
-					<a href="https://www.facebook.com/DurHack2017">Facebook</a>
-					<!--, or shoot us a <a href="https://twitter.com/durhackevent">tweet</a>. -->We'll get back to you as soon as possible.</p>
+				<p>We'll be happy to answer. Contact us by email at <a href="http://compsoc.dur.ac.uk">contactDurhack</a>, ping us on
+					<a href="https://www.facebook.com/DurhackEvent/">Facebook</a>
+					, or shoot us a <a href="https://twitter.com/durhackevent?lang=en">tweet</a>. -->We'll get back to you as soon as possible.</p>
 			</div>
 		</div>
 	</section>
@@ -296,10 +297,10 @@
 							<span class="name">Alex</span>
 						</div>
 
-						<!-- <div class="member">
+						 <div class="member">
 							<img src="images/squad/Sara.jpg">
 							<span class="name">Sara</span>
-						</div> -->
+						</div>
 
 						<div class="member">
 							<img src="images/squad/Zulia.jpg">
@@ -338,12 +339,12 @@
 	<section id="sponsors">
 		<div class="content">
 			<h2>Our Sponsors</h2>
-			<p>Interested in Sponsoring? <a href="alex.greenen@durham.ac.uk">Contact Us</a></p>
+			<p>Interested in Sponsoring? <a href="http://compsoc.dur.ac.uk">Contact Us</a></p>
 
 
 			<div class="partners">
 
-				<a href="http://durham.gov.uk" target="_blank">
+				<a href="http://www.durham.gov.uk" target="_blank">
 					<div class="behave">
 						<img src="images/sponsors/dcc.svg" />
 					</div>
@@ -351,13 +352,13 @@
 			</div>
 			<div class="cooler_helpers">
 
-				<a href="http://github.com" target="_blank"><img src="images/sponsors/gh.svg" class="l"/></a>
+				<a href="http://github.com" target="_blank"><img src="images/sponsors/Ggh.svg" class="l"/></a>
 				<a href="http://waterstons.com" target="_blank"><img src="images/sponsors/ws.svg" class="m"/></a>
 				 <a href="http://mlh.io" target="_blank"><img src="images/sponsors/mlh.svg" class="r"/></a><br>
 			</div>
 			<div class="helpers">
 
-				<a href="http://https://www.pwc.co.uk" target="_blank"><img src="images/sponsors/pwc.svg"/></a>
+				<a href="https://www.pwc.co.uk/" target="_blank"><img src="images/sponsors/pwc.svg"/></a>
               <!-- <a href="https://www.thehutgroup.com" target="_blank"><img src="images/sponsors/hut.svg"/></a> -->
 
 	 <a href="http://www.entrepreneursdurham.com/" target="_blank"><img src="images/sponsors/tech.svg"></a>
@@ -506,95 +507,26 @@
 	// cat button
 
 	function cats() {
-		setInterval(function() {
-			var cat = document.createElement("div");
-			cat.className = "cat";
-			var width = Math.floor((Math.random() * 200) + 100);
-			var height = Math.floor((Math.random() * 200) + 50);
-			var startLeft = Math.floor((Math.random() * screen.width));
-			var img = document.createElement("img");
-			img.setAttribute('width', width);
-			img.setAttribute('height', height);
-			img.setAttribute('src', "http://placebear.com/300/200" + width + "/" + height);
-			cat.style.top = "0px";
-			cat.style.left = startLeft + "px";
-			cat.appendChild(img);
-			document.getElementsByTagName("body")[0].appendChild(cat);
-			setTimeout(function() {
-				var cheight = document.getElementsByTagName("body")[0].clientHeight;
-				cat.style.top = Math.floor((Math.random() * cheight) + 200) + "px";
-			}, 100);
-		}, 1000);
-	}
-	/*
-
-	document.addEventListener('DOMContentLoaded', function() {
-		var pg = particleground(document.getElementById('sponsors'), {
-
-			dotColor: '#364565',
-			lineColor: '#364565',
-			maxSpeedX: 0.3,
-			maxSpeedY: 0.3,
-			particleRadius: 7,
-			parallax: false
-		});
-		//		    pg.pause();
-	}, false);
-	/*
-
-document.addEventListener('DOMContentLoaded', function() {
-
-var c = particleground (document.getElementById("sponsors"), {
-
-var ctx = c.getContext("2d");
-
-//making the canvas full screen
-c.height = window.innerHeight;
-c.width = window.innerWidth;
-
-//chinese characters - taken from the unicode charset
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
-//converting the string into an array of single characters
-chinese = chinese.split("");
-
-var font_size = 10;
-var columns = c.width/font_size; //number of columns for the rain
-//an array of drops - one per column
-var drops = [];
-//x below is the x coordinate
-//1 = y co-ordinate of the drop(same for every drop initially)
-for(var x = 0; x < columns; x++)
-	drops[x] = 1;
-
-//drawing the characters
-function draw()
-{
-	//Black BG for the canvas
-	//translucent BG to show trail
-	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-	ctx.fillRect(0, 0, c.width, c.height);
-
-	ctx.fillStyle = "#0F0"; //green text
-	ctx.font = font_size + "px arial";
-	//looping over drops
-	for(var i = 0; i < drops.length; i++)
-	{
-		//a random chinese character to print
-		var text = chinese[Math.floor(Math.random()*chinese.length)];
-		//x = i*font_size, y = value of drops[i]*font_size
-		ctx.fillText(text, i*font_size, drops[i]*font_size);
-
-		//sending the drop back to the top randomly after it has crossed the screen
-		//adding a randomness to the reset to make the drops scattered on the Y axis
-		if(drops[i]*font_size > c.height && Math.random() > 0.975)
-			drops[i] = 0;
-
-		//incrementing Y coordinate
-		drops[i]++;
-	}
-}
-
-setInterval(draw, 33) }) */
+			setInterval(function() {
+				var cat = document.createElement("div");
+				cat.className = "cat";
+				var width = Math.floor((Math.random() * 200) + 100);
+				var height = Math.floor((Math.random() * 200) + 50);
+				var startLeft = Math.floor((Math.random() * screen.width));
+				var img = document.createElement("img");
+				img.setAttribute('width', width);
+				img.setAttribute('height', height);
+				img.setAttribute('src', "http://placekitten.com/"+width+"/"+height);
+				cat.style.top = "0px";
+				cat.style.left = startLeft+"px";
+				cat.appendChild(img);
+				document.getElementsByTagName("body")[0].appendChild(cat);
+				setTimeout(function() {
+					var cheight = document.getElementsByTagName("body")[0].clientHeight;
+					cat.style.top = Math.floor((Math.random() * cheight) + 200)+"px";
+				},100);
+			}, 1000);
+		}
 
 
 </script>
