@@ -254,8 +254,8 @@ i {
 
 /* section padding */
 
-#logo_container {
-width: 100%;
+#logo_container img {
+width: 90%;
 }
 
 #about, #schedule, #faq, #team, #sponsors, #tickets {
