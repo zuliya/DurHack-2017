@@ -254,6 +254,10 @@ i {
 
 /* section padding */
 
+#logo_container img {
+width: 90%;
+}
+
 #about, #schedule, #faq, #team, #sponsors, #tickets {
   padding: 5em 4em;
 }
